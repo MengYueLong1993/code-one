@@ -1,0 +1,89 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style: none;
+}
+/*公共样式*/
+.heitaonine,
+.meihuafour {
+	width: 400px;
+	height: 600px;
+	position: absolute;
+	top: 100px;
+	border: 2px solid #000;
+	border-radius: 10px;
+	font-size: 88px;
+}
+.heitaonine-content,
+.meihuafour-content {
+	padding: 60px;
+}
+.heitaonine-content .content-l,
+.meihuafour-content .content-l {
+	float: left;
+}
+.heitaonine-content .content-r,
+.meihuafour-content .content-r {
+	float: right;
+}
+/*左上角*/
+.heitaonine::before,
+.meihuafour::before {
+	width: 60px;
+	height: 100px;
+	position: absolute;
+	left: 15px;
+	top: 10px;
+	font-size: 60px;
+	line-height: 50px;
+	text-align: center;
+}
+/*右下角*/
+.heitaonine::after,
+.meihuafour::after {
+	width: 60px;
+	height: 100px;
+	position: absolute;
+	right: 15px;
+	bottom: 10px;
+	font-size: 60px;
+	line-height: 50px;
+	text-align: center;
+	transform: rotate(180deg);
+}
+/*黑桃9*/
+.heitaonine {
+	left: 200px;
+}
+.heitaonine-content ul {
+	width: 60px;
+}
+.heitaonine-content span {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.heitaonine::before {
+	content: "9"" "attr(data-heitao);
+}
+.heitaonine::after {
+	content: "9"" "attr(data-heitao);
+}
+/*梅花4*/
+.meihuafour {
+	right: 200px;
+}
+.meihuafour-content ul {
+	width: 80px;
+	line-height: 240px;
+	font-size: 120px;
+}
+.meihuafour::before {
+	content: "4"" "attr(data-meihua);
+}
+.meihuafour::after {
+	content: "4"" "attr(data-meihua);
+}
