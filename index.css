@@ -15,6 +15,7 @@ ul {
 	border: 2px solid #000;
 	border-radius: 10px;
 	font-size: 88px;
+	transition: all 1s;
 }
 .heitaonine-content,
 .meihuafour-content {
@@ -72,6 +73,9 @@ ul {
 .heitaonine::after {
 	content: "9"" "attr(data-heitao);
 }
+.heitaonine:hover {
+	transform: rotate(360deg) scale(0.5);
+}
 /*梅花4*/
 .meihuafour {
 	right: 200px;
@@ -86,4 +90,7 @@ ul {
 }
 .meihuafour::after {
 	content: "4"" "attr(data-meihua);
+}
+.meihuafour:hover {
+	transform: rotateY(180deg);
 }
